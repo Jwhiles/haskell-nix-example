@@ -1,31 +1,43 @@
-Just playing around with haskell and nix
+An example of using Haskell with Nix
 
-you need nix
+This repository mostly exists as a minimum viable example for myself to refer to
+when I forget how things work.
 
-then u need cabal :(
+```
+# install nix, if you don't already have it
+$ curl https://nixos.org/nix/install | sh
 
-then run nix-shell
+# install cabal, if you don't already have it
+$ nix-env --install cabal-install
+```
 
-hpack && cabal2nix . > hask.nix
+now we are good to go!
 
-to build up a fun little haskelly nixy thing
+we can `nix-shell` to fire up a shell with the appropriate dependencies
 
-then nix-build project.nix to build it! woo
+
+We then need to create a cabal file, from our hpack
+
+`hpack && cabal2nix . > hask.nix`
+
+No we can just run
+`nix-build project.nix`
+to build it. nice,
 
 
 using nix build is bad though - because it can't cache work as smartly as cabal
 itself
 
+
 we can bring up another nix shell with everything we need to build with cabal by
 running
 
-`nix-shell --attr env release0.nix`
+`nix-shell --attr env project.nix`
 
 then run
 `cabal configure`
 `cabal run example`
 
-
-wow.
+wow. tasty
 
 
