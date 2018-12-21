@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: e62e9a390eeb2f7ec2872ebdadd19f09d9b6a3b8400bd0af1a1d70e39c8581db
+-- hash: 6c1d33f2c327518f4db87ee49dd22e5883e9eeb617c9d887dca037199f806729
 
 name:           example
 version:        0.0.1
@@ -17,6 +17,12 @@ executable example
       src
   ghc-options: -Wall
   build-depends:
-      base >=4.9 && <5
-    , servant >=1.4.1.0 && <1.5
+      aeson
+    , base
+    , servant
+    , servant-server
+    , text
+    , time
+    , wai
+    , warp
   default-language: Haskell2010
