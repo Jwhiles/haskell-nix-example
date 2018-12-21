@@ -1,0 +1,12 @@
+name: example
+version: 0.0.1
+
+
+ghc-options: -Wall
+
+dependencies:
+- base >= 4.9 && < 5
+
+executable:
+  main: Main.hs
+  source-dirs: src
