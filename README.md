@@ -18,7 +18,7 @@ we can `nix-shell` to fire up a shell with the appropriate dependencies
 
 We then need to create a cabal file, from our hpack
 
-`hpack && cabal2nix . > hask.nix`
+`buildCabal`
 
 No we can just run
 `nix-build project.nix`

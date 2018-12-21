@@ -6,6 +6,7 @@ ghc-options: -Wall
 
 dependencies:
 - base >= 4.9 && < 5
+- servant >=1.4.1.0 && <1.5
 
 executable:
   main: Main.hs
